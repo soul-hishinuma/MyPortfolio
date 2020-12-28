@@ -1,0 +1,143 @@
+
+html {
+  visibility: hidden;
+}
+
+html.wf-active{
+  visibility: visible;
+}
+
+body{
+  color:#333;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  width:100%;
+  display:block;
+}
+
+.contents{
+  position:relative;
+  display:flex;
+  flex-wrap:wrap;
+  font-family: "Gentium Basic";
+
+  .sidebar{
+    position:fixed;
+    left:0;
+    top:0;
+    width:20%;
+    height:100vh;
+    padding-top: 30px;
+    text-align: center;
+
+    .site-name a{
+      font-size: 46px;
+      font-weight: bold;
+      color:#249eff;
+      font-family: "EB Garamond";
+      background: linear-gradient( to right, rgb(75,116,250) 25%, rgb(192,38,223) 75%);
+      -webkit-background-clip: text;
+      color:transparent;
+    }
+
+    .logo{
+      width:40px;
+      margin:0 auto;
+    }
+
+    .sns-link{
+      position:absolute;
+      bottom:10px;
+      left:50%;
+      transform:translate(-50%);
+      display:flex;
+
+      li{
+        width:25px;
+        margin-right: 10px;
+      }
+    }
+
+    .nav{
+      position:absolute;
+      top:25vh;
+      left:50%;
+      transform:translate(-50%);
+      width:100%;
+
+      a{
+        display:block;
+        color:#333;
+        text-decoration: none;
+        font-size: 22px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  .main{
+    position:relative;
+    width:100%;
+    height:100vh;
+    margin-left: 20%;
+
+    .thumbnail{
+      display:flex;
+      flex-wrap:wrap;
+
+      li{
+        position:relative;
+        width:calc(100% / 4);
+        height:50vh;
+        cursor:pointer;
+        overflow:hidden;
+
+        a{
+          position:relative;
+          display:block;
+          height:100%;
+          width:100%;
+          cursor:pointer;
+          z-index:1;
+        }
+
+        img{
+          height:100%;
+          object-fit: cover;
+          transition:all 0.8s;
+          transform:scale(1,1);
+          backface-visibility:hidden;
+        }
+      }
+    }
+  }
+}
+
+.thumbnail li.is-active a:before,
+.thumbnail li a:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.6);
+	transition: all 0.5s;
+	opacity: 1;
+	z-index: 1;
+}
+
+.thumbnail li.is-active a:before,
+.thumbnail li:hover a:before{
+	opacity: 0;
+}
+
+.thumbnail li.is-active img,
+.thumbnail li:hover img{
+	transform: scale(1.1,1.1);
+}
