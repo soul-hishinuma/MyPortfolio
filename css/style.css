@@ -140,3 +140,63 @@ img {
 .thumbnail li:hover img {
   transform: scale(1.1, 1.1);
 }
+
+.name {
+  font-size: 50px;
+  text-align: center;
+}
+
+.hero-img {
+  width: cover;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.overview {
+  text-align: center;
+  font-size: 15px;
+}
+
+.detail {
+  margin-top: 50px;
+}
+
+.description {
+  margin-top: 10px;
+}
+
+.skill-item {
+  font-weight: bold;
+}
+
+.catch-copy {
+  font-weight: bold;
+}
+
+.head {
+  font-weight: bold;
+}
+
+.myu-logo-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.myu-logo-description {
+  width: 40%;
+}
+
+.myu-logo-img {
+  width: 40%;
+  margin-right: 50px;
+}
+
+.myu-logo-img img {
+  width: 70%;
+}
